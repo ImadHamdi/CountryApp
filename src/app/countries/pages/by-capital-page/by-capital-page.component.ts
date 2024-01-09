@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { CountriesService } from '../../services/countries.service';
+import { Country } from '../../interfaces/country';
 
 @Component({
   selector: 'app-by-capital-page',
@@ -7,8 +9,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ByCapitalPageComponent {
 
+  constructor( private countriesService: CountriesService ){}
+
+  public countries: Country[] = [];
+
   searchByCapital( term: string ): void{
-    console.log('desde bycapitalpage');
-    console.log({ term });
+    this.countriesService.searchCapital( term )
+    .subscribe( countries => {
+      this.countries = countries;
+    } );
   }
 }
