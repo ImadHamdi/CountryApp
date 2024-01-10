@@ -13,12 +13,12 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AboutPagesComponent,
-    SidebarComponent,
     ContactPageComponent,
+    HomePageComponent,
+    LoadingSpinnerComponent,
     SearchBoxComponent,
-    LoadingSpinnerComponent
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
@@ -26,11 +26,11 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
   ],
   exports: [
     AboutPagesComponent,
-    HomePageComponent,
-    SidebarComponent,
     ContactPageComponent,
+    HomePageComponent,
+    LoadingSpinnerComponent,
     SearchBoxComponent,
-    LoadingSpinnerComponent
+    SidebarComponent,
   ]
 })
 export class SharedModule { }
