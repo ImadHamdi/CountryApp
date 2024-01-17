@@ -46,7 +46,6 @@ export class CountryPageComponent implements OnInit{
 
       this.country = country;
 
-      console.log('TENEMOS UN PAIS');
       return;
     });
   }
